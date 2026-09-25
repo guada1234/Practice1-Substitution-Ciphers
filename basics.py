@@ -1,3 +1,6 @@
+
+
+
 def to_numbers(text: str) -> list[int]:
     new_text = text.upper()
     numbers = []
