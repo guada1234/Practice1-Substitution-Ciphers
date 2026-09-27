@@ -48,6 +48,16 @@ def test_break_vigenere_rejects_unknown_language():
         break_vigenere("ABCDEFGHIJ", 3, "fr")
 
 
+def test_break_vigenere_with_wrong_m_gives_no_warning():
+    fragment = REFERENCE_TEXT_EN[:300]
+    ciphertext = vigenere.encrypt(fragment, "LEMON")   # true key length is 5
+
+    wrong_key, wrong_plaintext = break_vigenere(ciphertext, 4, "en")   # wrong m on purpose
+
+    assert len(wrong_key) == 4
+    assert wrong_plaintext != fragment 
+
+
 KEY_LENGTH = 5
 TOTAL_LENGTH = 300
 TRIALS = 20

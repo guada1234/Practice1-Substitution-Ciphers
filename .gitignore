@@ -1,0 +1,18 @@
+# Bytecode compilado de Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Carpetas de editores/IDEs
+.vscode/
+.idea/
+
+# Cache de pytest
+.pytest_cache/
+
+# Archivos de texto de prueba (mensajes, cifrados, etc. que generaste probando el CLI)
+*.txt
