@@ -14,7 +14,7 @@ def to_numbers(text: str) -> list[int]:
 def to_letters(nums: list[int]) -> str:
     text = ""
     for num in nums:
-        normalized_number = num + ord('A')
+        normalized_number = (num % 26) + ord('A')
         text += chr(normalized_number) #de numero a letra
 
     return text
